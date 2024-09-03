@@ -7,7 +7,7 @@ const cors = require('cors')
 
 const petRouter = require('./controllers/pets.js')
 
-app.use(cors())
+app.use(cors({ origin: 'https://react-pets-front-end.netlify.app/' }))
 
 mongoose.connect(process.env.MONGODB_URI)
 
