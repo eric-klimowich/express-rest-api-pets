@@ -7,7 +7,7 @@ const cors = require('cors')
 
 const petRouter = require('./controllers/pets.js')
 
-app.use(cors({ origin: 'http://localhost:5173' }))
+app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URI)
 
