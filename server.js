@@ -19,6 +19,8 @@ app.use(express.json())
 
 app.use('/pets', petRouter)
 
-app.listen(3000, () => {
-  console.log('The express app is ready!')
-})
+app.set("port", process.env.PORT || 3000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
